@@ -10,8 +10,8 @@ exports.crearProducto = async (req, res) => {
         await producto.save()
         res.send(producto)
     } catch (error) {
-        console.log(error)
-        res.status(500).send('Hubo un error en la creacion de producto')
+        console.error('Error al registrar el producto:', error);
+        res.status(500).send('Hubo un error en la creación de producto');
     }
 }
 
